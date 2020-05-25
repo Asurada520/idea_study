@@ -8,5 +8,7 @@ public class SpringAopApp {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring.xml");
         UserService userService = (UserService)applicationContext.getBean("userService");
         userService.addUser();
+        // called against
+        userService.addUser();
     }
 }
