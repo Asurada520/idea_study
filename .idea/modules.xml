@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/idea_study.iml" filepath="$PROJECT_DIR$/.idea/idea_study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mos-interview/interview.iml" filepath="$PROJECT_DIR$/mos-interview/interview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-aop/spring-aop.iml" filepath="$PROJECT_DIR$/spring-aop/spring-aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-maven/spring-maven.iml" filepath="$PROJECT_DIR$/spring-maven/spring-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-web/spring-web.iml" filepath="$PROJECT_DIR$/spring-web/spring-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-apollo/springboot-apollo.iml" filepath="$PROJECT_DIR$/springboot-apollo/springboot-apollo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-disruptor/springboot-disruptor.iml" filepath="$PROJECT_DIR$/springboot-disruptor/springboot-disruptor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-ehcache/springboot-ehcache.iml" filepath="$PROJECT_DIR$/springboot-ehcache/springboot-ehcache.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-ehcache1/springboot-ehcache1.iml" filepath="$PROJECT_DIR$/springboot-ehcache1/springboot-ehcache1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-getui/springboot-getui.iml" filepath="$PROJECT_DIR$/springboot-getui/springboot-getui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-job/springboot-job.iml" filepath="$PROJECT_DIR$/springboot-job/springboot-job.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-redis/springboot-redis.iml" filepath="$PROJECT_DIR$/springboot-redis/springboot-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-redis-lock/springboot-redis-lock.iml" filepath="$PROJECT_DIR$/springboot-redis-lock/springboot-redis-lock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-session/springboot-session.iml" filepath="$PROJECT_DIR$/springboot-session/springboot-session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-web-a/springboot-web-a.iml" filepath="$PROJECT_DIR$/springboot-web-a/springboot-web-a.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-web-b/springboot-web-b.iml" filepath="$PROJECT_DIR$/springboot-web-b/springboot-web-b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-zk-test/springboot-zk-test.iml" filepath="$PROJECT_DIR$/springboot-zk-test/springboot-zk-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thread-test/thread-test.iml" filepath="$PROJECT_DIR$/thread-test/thread-test.iml" />
+    </modules>
+  </component>
+</project>

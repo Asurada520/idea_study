@@ -1,0 +1,13 @@
+package com.ybzbcq.designpattern.observer;
+
+public class ObserverTest {
+  
+    public static void main(String[] args) {  
+        Subject sub = new MySubject();  
+        sub.add(new Observer1());
+        sub.add(new Observer2());
+          
+        sub.operation("通知信息: 您好！tqq ");
+    }  
+  
+}

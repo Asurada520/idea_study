@@ -1,0 +1,52 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	 http://www.springframework.org/schema/beans/spring-beans.xsd
+     	 http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop.xsd
+         http://www.springframework.org/schema/tx
+     	 http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<context:component-scan base-package="com.ybzbcq"></context:component-scan>
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy> <!-- 开启事物注解 -->
+
+	<!-- 1. 数据源对象: C3P0连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test"></property>
+		<property name="user" value="root"></property>
+		<property name="password" value="123456"></property>
+	</bean>
+
+	<!-- 2. JdbcTemplate工具类实例 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<!-- 3.配置事务 -->
+	<bean id="dataSourceTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	<!-- 开启注解事务 -->
+	<tx:annotation-driven transaction-manager="dataSourceTransactionManager" />
+
+	<!--<bean id="userService" class="com.ybzbcq.proxy.UserServiceImpl"/>
+	<bean id="aopLog2" class="com.ybzbcq.aop.AopLog2"/>
+
+	<aop:config>
+		<aop:pointcut id="pt" expression="execution(* com.ybzbcq.proxy.UserServiceImpl.insert(..))"/>
+		<aop:aspect ref="aopLog2">
+				<aop:before method="begin" pointcut-ref="pt"/>
+				<aop:after method="after" pointcut-ref="pt"/>
+				<aop:after-returning method="afterReturning" pointcut-ref="pt"/>
+				<aop:around method="around" pointcut-ref="pt"/>
+				<aop:after-throwing method="afterThrowing" pointcut-ref="pt"/>
+		</aop:aspect>
+	</aop:config>-->
+
+</beans>

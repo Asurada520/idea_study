@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="itmayiedu-web-a:war">
+    <output-path>$PROJECT_DIR$/itmayiedu-web-a/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>itmayiedu-web-a</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="itmayiedu-web-a-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="itmayiedu-web-a:war exploded" />
+    </root>
+  </artifact>
+</component>

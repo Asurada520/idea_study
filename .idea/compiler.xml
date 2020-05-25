@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="apollo-adminservice" />
+        <module name="apollo-assembly" />
+        <module name="apollo-biz" />
+        <module name="apollo-buildtools" />
+        <module name="apollo-client" />
+        <module name="apollo-common" />
+        <module name="apollo-configservice" />
+        <module name="apollo-core" />
+        <module name="apollo-demo" />
+        <module name="apollo-mockserver" />
+        <module name="apollo-portal" />
+        <module name="interview" />
+        <module name="spring-aop" />
+        <module name="spring-maven" />
+        <module name="springboot-apollo" />
+        <module name="springboot-disruptor" />
+        <module name="springboot-ehcache" />
+        <module name="springboot-ehcache1" />
+        <module name="springboot-getui" />
+        <module name="springboot-job" />
+        <module name="springboot-redis" />
+        <module name="springboot-redis-lock" />
+        <module name="springboot-session" />
+        <module name="springboot-web-a" />
+        <module name="springboot-web-b" />
+        <module name="springboot-zk-test" />
+        <module name="thread-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="apollo" target="1.8" />
+      <module name="apollo-adminservice" target="1.8" />
+      <module name="apollo-assembly" target="1.8" />
+      <module name="apollo-biz" target="1.8" />
+      <module name="apollo-buildtools" target="1.8" />
+      <module name="apollo-client" target="1.7" />
+      <module name="apollo-common" target="1.8" />
+      <module name="apollo-configservice" target="1.8" />
+      <module name="apollo-core" target="1.7" />
+      <module name="apollo-demo" target="1.7" />
+      <module name="apollo-mockserver" target="1.8" />
+      <module name="apollo-portal" target="1.8" />
+      <module name="interview" target="1.8" />
+      <module name="itmayiedu-web-a" target="1.8" />
+      <module name="itmayiedu-web-b" target="1.8" />
+      <module name="spring-aop" target="8" />
+      <module name="spring-maven" target="1.8" />
+      <module name="spring-web" target="1.8" />
+      <module name="springboot-apollo" target="1.8" />
+      <module name="springboot-disruptor" target="1.5" />
+      <module name="springboot-ehcache" target="1.8" />
+      <module name="springboot-ehcache1" target="1.8" />
+      <module name="springboot-getui" target="1.8" />
+      <module name="springboot-job" target="1.5" />
+      <module name="springboot-redis" target="1.8" />
+      <module name="springboot-redis-lock" target="1.5" />
+      <module name="springboot-session" target="1.8" />
+      <module name="springboot-web-a" target="1.8" />
+      <module name="springboot-web-b" target="1.8" />
+      <module name="springboot-zk-test" target="1.8" />
+      <module name="thread-test" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="interview" options="-parameters" />
+      <module name="itmayiedu-web-a" options="-parameters" />
+      <module name="itmayiedu-web-b" options="-parameters" />
+      <module name="springboot-apollo" options="-parameters" />
+      <module name="springboot-ehcache" options="-parameters" />
+      <module name="springboot-ehcache1" options="-parameters" />
+      <module name="springboot-getui" options="-parameters" />
+      <module name="springboot-redis" options="-parameters" />
+      <module name="springboot-session" options="-parameters" />
+      <module name="springboot-web-a" options="-parameters" />
+      <module name="springboot-web-b" options="-parameters" />
+      <module name="springboot-zk-test" options="-parameters" />
+    </option>
+  </component>
+</project>

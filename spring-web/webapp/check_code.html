@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkCode</title>
+</head>
+<body>
+
+    <h3>带有验证码的登录页面</h3>
+
+    <form action="logonFormServlet" method="post">
+        用户名：<input type="text" name="name"/><br/>
+        密码：<input type="password" name="pass"/><br/>
+        验证码：<input type="text" name="check_code"/>
+        <img src="checkCodeServlet"/><br/>
+        <input type="submit" value="登录"/><br/>
+    </form>
+
+</body>
+</html>

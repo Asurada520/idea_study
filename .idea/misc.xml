@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FindBugsConfigurable">
+    <option name="make" value="true" />
+    <option name="effort" value="default" />
+    <option name="priority" value="Medium" />
+    <option name="excludeFilter" value="" />
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/itmayiedu-web-a" />
+    <file type="web" url="file://$PROJECT_DIR$/itmayiedu-web-b" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-maven" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-web" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot-web-a" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot-web-b" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/thread-test/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-ehcache/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-ehcache1/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-session/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-web-a/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-web-b/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-zk-test/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-job/pom.xml" />
+        <option value="$PROJECT_DIR$/apollo-master/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-apollo/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-redis-lock/pom.xml" />
+        <option value="$PROJECT_DIR$/mos-interview/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-aop/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-getui/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-disruptor/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-maven/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/apollo-master/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
+  </component>
+</project>

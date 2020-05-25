@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>article</title>
+
+
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        //checkbox 全选/取消全选
+        var isCheckAll = false;
+
+        function swapCheck() {
+            if (isCheckAll) {
+                $("input[type='checkbox']").each(function () {
+                    this.checked = false;
+                });
+                isCheckAll = false;
+            } else {
+                $("input[type='checkbox']").each(function () {
+                    this.checked = true;
+                });
+                isCheckAll = true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<form action="delArticleServlet" method="post">
+
+    <table border="1" width="80%">
+        <tr>
+            <td>选择</td>
+            <td>标题</td>
+            <td>作者</td>
+            <td>日期</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="article_id" value="1"/></td>
+            <td><a href="viewArticle?article_id=1">咨询Java培训</a></td>
+            <td>岳不群</td>
+            <td>2020年4月18日</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="article_id" value="2"/></td>
+            <td><a href="viewArticle?article_id=2">购买Java教材</a></td>
+            <td>岳灵珊</td>
+            <td>2020年4月19日</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="article_id" value="3"/></td>
+            <td><a href="viewArticle?article_id=3">培训合作</a></td>
+            <td>任盈盈</td>
+            <td>2020年4月20日</td>
+        </tr>
+
+        <tr>
+            <td><input type="checkbox" name="article_id" value="4"/></td>
+            <td><a href="viewArticle?article_id=4">探讨技术</a></td>
+            <td>令狐冲</td>
+            <td>2020年4月21日</td>
+        </tr>
+
+    </table>
+    <br/>
+    <input type="checkbox" name="selAll" onclick="swapCheck()"/>全选<br/>
+    <input type="submit" name="del" value="删除到垃圾桶"/><br/>
+    <input type="submit" name="del" value="彻底删除"/><br/>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>repeat</title>
+
+    <script>
+        /* 是否已经提价表单 标记 */
+        var isCommitted = false;
+
+        function checkPost() {
+            if (!isCommitted) {
+                isCommitted = true;
+                return true;
+            } else {
+                alert("亲，您不可以重复提交表单信息，谢谢您~~");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+<body>
+<form action="repeatFormServlet" method="post" onsubmit="return checkPost()">
+    留言内容：<textarea name="note"></textarea><br/>
+    <input type="submit"/>
+</form>
+</body>
+</html>

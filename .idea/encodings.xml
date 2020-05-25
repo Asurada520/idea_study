@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$/mos-interview" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-maven" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-web/target/chinese.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-web/target/chineseParam.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-web/webapp/chinese.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/spring-web/webapp/chineseParam.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/springboot-apollo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-ehcache" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-ehcache1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-getui" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-job" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-session" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-web-a" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-web-b" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot-zk-test" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
