@@ -1,5 +1,6 @@
 package com.mxingo.getui.platform.demo.test.messagepush;
 
+import com.gexin.fastjson.JSON;
 import com.gexin.fastjson.JSONObject;
 import com.gexin.rp.sdk.base.IIGtPush;
 import com.gexin.rp.sdk.base.IPushResult;
@@ -87,17 +88,21 @@ public class PushMessageToSingleTest extends PushBase {
         //ios 12.0 以上可以使用 Dictionary 类型的 sound
         payload.setSound("default");
         payload.setCategory("$由客户端定义");
-        payload.addCustomMsg("由客户自定义消息key", "由客户自定义消息value");
+
+        String jsonStr = "{\"title\" : \"任行出行\",\"msg\" : \"派单/报价->无锡市新吴区苏南硕放国际机场-T2航站楼\",\"order\" : {\"bookDays\":1,\"bookTime\":\"2020-05-28 09:00:00\",\"carLevel\":1,\"carNo\":\"苏Q35665\",\"driverNo\":\"257aa43e3e834ea0bd\",\"endAddr\":\"江苏省无锡市无锡市\",\"endLat\":31.49881,\"endLon\":120.318582,\"orderAmount\":100,\"orderModel\":1,\"orderNo\":\"202005261527502956\",\"orderStatus\":1,\"orderType\":1,\"orgId\":\"ffcf2166b02642e4bf\",\"passengerMobile\":\"15696164096\",\"passengerName\":\"岳不群\",\"payAmount\":0,\"planMileage\":15966,\"source\":9,\"startAddr\":\"无锡市新吴区苏南硕放国际机场-T2航站楼\",\"startLat\":31.510936,\"startLon\":120.440382,\"usrId\":0},\"taskId\" : \"2020052715114728386\",\"pushType\" : \"10000\"}";
+        JSONObject jsonObject = JSON.parseObject(jsonStr);
+
+        payload.addCustomMsg("body", jsonObject);
 
         //简单模式APNPayload.SimpleMsg
-        payload.setAlertMsg(new APNPayload.SimpleAlertMsg("hello"));
-        //payload.setAlertMsg(getDictionaryAlertMsg());  //字典模式使用APNPayload.DictionaryAlertMsg
+        payload.setAlertMsg(new APNPayload.SimpleAlertMsg("【任行约车】温馨提醒：您有新的订单啦，用车时间为:2020-05-28 09:00,上车地点为:无锡市新吴区苏南硕放国际机场-T2航站楼,目的地:江苏省无锡市无锡市，请您尽快处理,感谢您的支持和配合！"));
+//        payload.setAlertMsg(getDictionaryAlertMsg());  //字典模式使用APNPayload.DictionaryAlertMsg
 
         //设置语音播报类型，int类型，0.不可用 1.播放body 2.播放自定义文本
         payload.setVoicePlayType(2);
         //设置语音播报内容，String类型，非必须参数，用户自定义播放内容，仅在voicePlayMessage=2时生效
         //注：当"定义类型"=2, "定义内容"为空时则忽略不播放
-        payload.setVoicePlayMessage("定义内容");
+        payload.setVoicePlayMessage("【任行约车】温馨提醒：您有新的订单啦，用车时间为:2020-05-28 09:00,上车地点为:无锡市新吴区苏南硕放国际机场-T2航站楼,目的地:江苏省无锡市无锡市，请您尽快处理,感谢您的支持和配合！");
 
         // 添加多媒体资源
         payload.addMultiMedia(new MultiMedia().setResType(MultiMedia.MediaType.pic)
@@ -109,15 +114,15 @@ public class PushMessageToSingleTest extends PushBase {
 
     private static APNPayload.DictionaryAlertMsg getDictionaryAlertMsg() {
         APNPayload.DictionaryAlertMsg alertMsg = new APNPayload.DictionaryAlertMsg();
-        alertMsg.setBody("body1");
+        alertMsg.setBody("您有新的订单啦");
         alertMsg.setActionLocKey("显示关闭和查看两个按钮的消息");
-        alertMsg.setLocKey("loc-key1");
+        alertMsg.setLocKey("{\"title\" : \"任行出行\",\"msg\" : \"派单/报价->无锡市新吴区苏南硕放国际机场-T2航站楼\",\"order\" : {\"bookDays\":1,\"bookTime\":\"2020-05-28 09:00:00\",\"carLevel\":1,\"carNo\":\"苏Q35665\",\"driverNo\":\"257aa43e3e834ea0bd\",\"endAddr\":\"江苏省无锡市无锡市\",\"endLat\":31.49881,\"endLon\":120.318582,\"orderAmount\":100,\"orderModel\":1,\"orderNo\":\"202005261527502956\",\"orderStatus\":1,\"orderType\":1,\"orgId\":\"ffcf2166b02642e4bf\",\"passengerMobile\":\"15696164096\",\"passengerName\":\"岳不群\",\"payAmount\":0,\"planMileage\":15966,\"source\":9,\"startAddr\":\"无锡市新吴区苏南硕放国际机场-T2航站楼\",\"startLat\":31.510936,\"startLon\":120.440382,\"usrId\":0},\"taskId\" : \"2020052715114728386\",\"pushType\" : \"10000\"}");
         alertMsg.addLocArg("loc-ary1");
         alertMsg.setLaunchImage("调用已经在应用程序中绑定的图形文件名");
         // iOS8.2以上版本支持
-        alertMsg.setTitle("通知标题");
-        alertMsg.setTitleLocKey("自定义通知标题");
-        alertMsg.addTitleLocArg("自定义通知标题组");
+        alertMsg.setTitle("【任行约车】");
+        alertMsg.setTitleLocKey("温馨提醒：您有新的订单啦");
+        alertMsg.addTitleLocArg("时间为:2020-05-28 09:00,订单号:202005261527502956,航班号:无,订单类型:接机,车型:经济型,上车地点为:无锡市新吴区苏南硕放国际机场-T2航站楼,目的地:江苏省无锡市无锡市,客户:岳不群,客户手机号:15696164096,请您尽快处理,感谢您的支持和配合！");
         return alertMsg;
     }
 
