@@ -6,9 +6,7 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.springframework.util.CollectionUtils;
 
-import java.beans.Expression;
 import java.io.InputStream;
-import java.util.Collections;
 import java.util.List;
 
 public class ExtClassPathXmlApplicationContext {
