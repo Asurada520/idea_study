@@ -47,7 +47,7 @@ public class ExtClassPathXmlApplicationContext {
         return clazz.newInstance();
     }
 
-    private String getClassPath(String beanId, List<Element> elements) {
+    private String getClassPath(String beanId, List<Element> elements) throws Exception {
 
         String classPath = null;
 
@@ -58,6 +58,8 @@ public class ExtClassPathXmlApplicationContext {
             }
             if(id.equals(beanId)){
                 classPath = element.attributeValue("class");
+            }else{
+                throw new Exception(beanId +", BeanId is not exist");
             }
         }
         return classPath;
