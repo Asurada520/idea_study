@@ -1,6 +1,6 @@
 package com.jade.service.impl;
 
-import com.jade.annotation.ExtService;
+import com.jade.extannotation.ExtService;
 import com.jade.service.OrderService;
 
 @ExtService

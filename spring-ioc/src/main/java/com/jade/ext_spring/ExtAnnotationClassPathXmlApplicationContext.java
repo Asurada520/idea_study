@@ -1,12 +1,11 @@
 package com.jade.ext_spring;
 
-import com.jade.annotation.ExtResource;
-import com.jade.annotation.ExtService;
+import com.jade.extannotation.ExtResource;
+import com.jade.extannotation.ExtService;
 import com.jade.utils.ClassUtil;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.util.CollectionUtils;
 
-import javax.swing.text.html.parser.Entity;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.util.ArrayList;

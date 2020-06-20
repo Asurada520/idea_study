@@ -1,10 +1,9 @@
 package com.jade.service.impl;
 
-import com.jade.annotation.ExtResource;
-import com.jade.annotation.ExtService;
+import com.jade.extannotation.ExtResource;
+import com.jade.extannotation.ExtService;
 import com.jade.service.OrderService;
 import com.jade.service.UserService;
-import org.springframework.stereotype.Service;
 
 @ExtService
 public class UserServiceImpl implements UserService {

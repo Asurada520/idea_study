@@ -1,4 +1,4 @@
-package com.jade.annotation;
+package com.jade.extannotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
