@@ -15,6 +15,9 @@ import java.util.Enumeration;
 
 @WebServlet(name = "AuthenticateServlet")
 public class AuthenticateServlet extends HttpServlet {
+
+    private int count = 0;
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
@@ -26,9 +29,9 @@ public class AuthenticateServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        response.setDateHeader("Expires",0);
-        response.setHeader("Cache-Control","no-cache");
-        response.setHeader("Pragma","no-cache");
+        response.setDateHeader("Expires", 0);
+        response.setHeader("Cache-Control", "no-cache");
+        response.setHeader("Pragma", "no-cache");
 
         response.setContentType("text/html; charset=UTF-8");
         PrintWriter out = response.getWriter();
@@ -72,12 +75,21 @@ public class AuthenticateServlet extends HttpServlet {
         }
 
         String user = decodeInfo.substring(0, idx);
-        String password = decodeInfo.substring(idx+1);
+        String password = decodeInfo.substring(idx + 1);
 
-        if("zxx".equals(user) && "123456".equals(password)){
+        if ("zxx".equals(user) && "123456".equals(password)) {
             out.println("这是您要看的信息 ... ");
-        } else{
+        } else {
+            count++;
+            System.out.println("count=" + count);
+            if (count > 3) {
+                out.println("您无权访问此信息");
+                return;
+            }
             out.println("权限受限，烦请联系管理员 ... ");
+
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.setHeader("WWW-Authenticate", "BASIC realm=\"jade\""); // todo
         }
 
 //        out.close();

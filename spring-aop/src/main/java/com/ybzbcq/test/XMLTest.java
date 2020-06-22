@@ -43,7 +43,5 @@ public class XMLTest {
             getNodes(next);
         }
 
-        System.out.println("------------------------------------------------------------");
-
     }
 }
