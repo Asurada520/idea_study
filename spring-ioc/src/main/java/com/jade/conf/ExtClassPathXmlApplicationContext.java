@@ -79,9 +79,11 @@ public class ExtClassPathXmlApplicationContext {
     }
 
     public InputStream getXmlInputStream() throws Exception {
+
         if(StringUtils.isEmpty(xmlPath)){
             throw new Exception("xml path is null");
         }
+
         InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream(xmlPath);
         return inputStream;
     }
