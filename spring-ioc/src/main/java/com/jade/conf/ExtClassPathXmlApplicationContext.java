@@ -67,6 +67,7 @@ public class ExtClassPathXmlApplicationContext {
 
     // 解析配置文件
     private List<Element> getElements() throws Exception {
+
         SAXReader saxReader = new SAXReader();
         Document document = saxReader.read(getXmlInputStream());
         Element rootElement = document.getRootElement();
