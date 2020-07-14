@@ -23,7 +23,8 @@ public class DispatcherServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String china1 = "中国";
 //        String china = URLEncoder.encode(china1, "GB2312");
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("chineseParamServlet?p1=" + URLEncoder.encode(china1, "GB2312"));
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("chineseParamServlet?p1=" +china1);
+//        RequestDispatcher requestDispatcher = request.getRequestDispatcher("chineseParamServlet?p1=" +URLEncoder.encode(china1, "GB2312"));
         requestDispatcher.forward(request,response);
     }
 }
