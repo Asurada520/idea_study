@@ -23,7 +23,7 @@ public class QuratzTest {
         long time = System.currentTimeMillis() + 3 * 1000L; // 3秒后启动
         Date startDate = new Date(time);
 
-        Trigger trigger = TriggerBuilder.newTrigger().withDescription("").withIdentity("ramTriger", "ramTrigerGroup")
+        Trigger trigger = TriggerBuilder.newTrigger().withDescription("ramTrigger").withIdentity("ramTrigger", "ramTriggerGroup")
                 .startAt(startDate)
                 .withSchedule(CronScheduleBuilder.cronSchedule("0/2 * * * * ?"))
                 .build();
