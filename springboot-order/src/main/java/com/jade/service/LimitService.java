@@ -25,8 +25,6 @@ public class LimitService {
             e.printStackTrace();
         }
 
-        System.out.println(start + " " + newTime);
-
         if (newTime > (start + interval)) {
             start = newTime;
             atomicInteger.set(0);
