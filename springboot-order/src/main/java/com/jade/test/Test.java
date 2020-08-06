@@ -5,8 +5,10 @@ import com.jade.service.LimitService;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
 /**
- * atomicInteger 原子类测试  限流
+ * 限流算法
+ * 功能说明: 纯手写计数器方式
  */
 public class Test {
     public static void main(String[] args) {
