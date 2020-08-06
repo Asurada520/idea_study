@@ -13,7 +13,6 @@ import java.util.concurrent.Executors;
 public class Test {
     public static void main(String[] args) {
 
-        // 创建 限制服务
         LimitService limitService = new LimitService();
 
         ExecutorService newCachedThreadPool = Executors.newCachedThreadPool();
