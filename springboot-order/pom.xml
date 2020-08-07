@@ -34,16 +34,25 @@
             <version>1.2.47</version>
         </dependency>
 
+        <!--hystrix 服务隔离-->
         <dependency>
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-metrics-event-stream</artifactId>
             <version>1.5.12</version>
         </dependency>
 
+        <!--hystrix 服务隔离-->
         <dependency>
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-javanica</artifactId>
             <version>1.5.12</version>
+        </dependency>
+
+        <!--RateLimiter实现令牌桶限流-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
         </dependency>
 
     </dependencies>
