@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jade.dao.DriverMapper">
+    <select id="getDriver" resultType="map">
+        select * from baseinfo_driverapp;
+    </select>
+
+    <insert id="batchInsertList">
+        insert into driverflowday
+        (
+            cuuid,
+            ccode,
+            ccity,
+            ccityname,
+            linetype,
+            surname,
+            `name`,
+            fullname,
+            identify,
+            phone,
+            driveridentify,
+            drivertype,
+            licenseprovince,
+            licenseno,
+            fulllicense,
+            carbrand,
+            cartype,
+            carlevel,
+            carcolor,
+            seats,
+            energytype,
+            recommend,
+            recommendcode,
+            `status`,
+            createtime,
+            updatetime
+        )
+        values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (
+                #{item.cuuid},
+                #{item.ccode},
+                #{item.ccity},
+                #{item.ccityname},
+                #{item.linetype},
+                #{item.surname},
+                #{item.name},
+                #{item.fullname},
+                #{item.identify},
+                #{item.phone},
+                #{item.driveridentify},
+                #{item.drivertype},
+                #{item.licenseprovince},
+                #{item.licenseno},
+                #{item.fulllicense},
+                #{item.carbrand},
+                #{item.cartype},
+                #{item.carlevel},
+                #{item.carcolor},
+                #{item.seats},
+                #{item.energytype},
+                #{item.recommend},
+                #{item.recommendcode},
+                #{item.status},
+                #{item.createtime},
+                #{item.updatetime}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

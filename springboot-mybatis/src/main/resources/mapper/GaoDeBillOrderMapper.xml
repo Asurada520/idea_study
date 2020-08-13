@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jade.dao.GaoDeBillOrderMapper">
+
+    <insert id="batchInsertList">
+        insert into gaodebillorder
+        (
+            cuuid,
+            billcode,
+            drivercode,
+            drivername,
+            fleetname,
+            phone,
+            plateno,
+            carbrand,
+            cartype,
+            cityname,
+            actualmileage,
+            actualtime,
+            surcharge,
+            mileageprice,
+            totalprice,
+            createtime
+        )
+        values
+        <foreach item="item" index="index" collection="list" separator=",">
+            (
+                #{item.cuuid},
+                #{item.billcode},
+                #{item.drivercode},
+                #{item.drivername},
+                #{item.fleetname},
+                #{item.phone},
+                #{item.plateno},
+                #{item.carbrand},
+                #{item.cartype},
+                #{item.cityname},
+                #{item.actualmileage},
+                #{item.actualtime},
+                #{item.surcharge},
+                #{item.mileageprice},
+                #{item.totalprice},
+                #{item.createtime}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

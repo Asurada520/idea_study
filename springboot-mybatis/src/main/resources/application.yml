@@ -1,0 +1,26 @@
+spring:
+  #  resources:
+  #    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+  jpa:
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://192.168.0.121:3307/rx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 1
+    driver-class-name: com.mysql.jdbc.Driver
+  # mvc 配置
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/*.xml
+#    com.threefivework.mymall.dao.mapper: DEBUG #包路径为mapper文件包路径
+
+logging:
+  level:
+    org.springframework.web: TRACE
