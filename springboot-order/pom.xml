@@ -55,6 +55,12 @@
             <version>25.1-jre</version>
         </dependency>
 
+        <!-- springboot 整合AOP -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
     </dependencies>
 
 </project>
