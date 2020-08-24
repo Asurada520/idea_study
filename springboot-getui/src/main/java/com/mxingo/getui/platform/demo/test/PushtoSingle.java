@@ -22,7 +22,8 @@ public class PushtoSingle {
     private static String appKey = "D5xdzX9Kk19S2M5VyyYOz8";
     private static String masterSecret = "Nk62hr2nG568NQg74CZdm4";
 
-    static String CID = "b4b76e16f6d1815a49298adfefd907ef";
+    static String CID = "606102f9acac3d218625a0e6075791d4";
+    //
     // 别名推送方式
 //     static String Alias = "15251707110";
     static String host = "http://sdk.open.api.igexin.com/apiex.htm";
@@ -84,7 +85,7 @@ public class PushtoSingle {
         template.setStyle(style);
 
         template.setTransmissionType(1);  // 透传消息接受方式设置，1：立即启动APP，2：客户端收到消息后需要自行处理
-        template.setTransmissionContent("请输入您要透传的内容");
+        template.setTransmissionContent("{\"title\" : \"任行约车司机端\",\"msg\" : \"你有新的车队订单，请及时接单\",\"order\" : {\"bookDays\":0,\"bookTime\":\"2020-08-31 21:00:00\",\"carLevel\":1,\"carNo\":\"苏Q35665\",\"driverNo\":\"257aa43e3e834ea0bd\",\"endAddr\":\"苏州市姑苏区和基广场-地上停车场\",\"endLat\":31.314591,\"endLon\":120.638144,\"orderAmount\":100,\"orderModel\":1,\"orderNo\":\"202008241647504513\",\"orderStatus\":1,\"orderType\":1,\"orgId\":\"ffcf2166b02642e4bf\",\"passengerMobile\":\"15696164096\",\"passengerName\":\"任2\",\"payAmount\":0,\"planMileage\":84349,\"remark\":\" 1\\r\\n\\t\\t\\t\\t\\r\\n\\t\\t\\t\",\"source\":9,\"startAddr\":\"上海市闵行区上海虹桥国际机场-T2航站楼\",\"startLat\":31.200811,\"startLon\":121.333905,\"tripNo\":\"111111\",\"usrId\":0},\"taskId\" : \"2020082417024155867\",\"pushType\" : \"10000\"}");
 
         //template.setAPNInfo(getAPNPayload()); //详见【推送模板说明】iOS通知样式设置
         return template;
