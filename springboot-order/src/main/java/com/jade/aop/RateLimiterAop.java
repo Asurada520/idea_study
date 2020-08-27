@@ -78,7 +78,7 @@ public class RateLimiterAop {
 //            writer.println("系统服务繁忙，烦请过一段时间再重试，谢谢");
 //        } catch (IOException e) {
 //            e.printStackTrace();
-//            writer.println("mang");
+//            writer.println("many");
 //
 //        }finally {
 //            writer.close();
