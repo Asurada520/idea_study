@@ -18,8 +18,6 @@ public class IndexController {
     private RedisClient redisClient;
 
     @RequestMapping("test")
-
-
     public Object getInfo(){
         Jedis jedis=new Jedis("127.0.0.1",6379);
         System.out.println(jedis.ping());
