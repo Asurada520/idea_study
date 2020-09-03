@@ -124,7 +124,7 @@ public class BatchController {
             }
             System.out.println("orderInsertList: "+orderInsertList);
             //插入数据
-            gaoDeBillOrderService.batchInsert(orderInsertList);
+            gaoDeBillOrderService.batchInsert(orderInsertList, dateTime);
 
         } catch (Exception e) {
             e.printStackTrace();
