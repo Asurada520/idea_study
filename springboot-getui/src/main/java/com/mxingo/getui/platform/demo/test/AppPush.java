@@ -20,6 +20,7 @@ public class AppPush {
     private static String appId = "rTBlL1Md7W54v0bap7jPp6";
     private static String appKey = "D5xdzX9Kk19S2M5VyyYOz8";
 //    private static String masterSecret = "Nk62hr2nG568NQg74CZdm4";
+    //
     private static String masterSecret = "8OKkZGiruR7ov0j1wjh5q7";
     private static String url = "http://sdk.open.api.igexin.com/apiex.htm";
 

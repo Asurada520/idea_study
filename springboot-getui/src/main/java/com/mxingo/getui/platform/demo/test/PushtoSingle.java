@@ -28,6 +28,7 @@ public class PushtoSingle {
 
     static String CID = "3afc5fe67092c89705e51ffa7dd4d8d0";
     // 3afc5fe67092c89705e51ffa7dd4d8d0
+    //  3afc5fe67092c89705e51ffa7dd4d8d0
 
     //
     // 别名推送方式
