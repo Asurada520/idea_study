@@ -41,7 +41,7 @@ public class RateLimiterAop {
         }
 
         double value = extRateLimiter.value();
-        long timeOut = extRateLimiter.timeOut();
+        long timeOut = extRateLimiter.timeout();
 
         ServletRequestAttributes requestAttributes = getServletRequestAttributes();
         HttpServletRequest request = requestAttributes.getRequest();
