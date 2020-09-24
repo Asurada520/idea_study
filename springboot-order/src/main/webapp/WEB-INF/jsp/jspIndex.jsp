@@ -9,7 +9,7 @@
 <body>
 
 	<h1>我是B项目....</h1>
-	<img alt="" src="http://localhost:9090/imgs/01.png">
+	<img alt="" src="http://www.jade.com:9090/imgs/01.png">
 
 </body>
 </html>
