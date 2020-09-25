@@ -24,6 +24,7 @@ public class TokenUtils {
 
         boolean flag = tokenMap.containsKey(token);
         if(flag){
+            tokenMap.remove(token);
             return true;
         }else{
             return false;

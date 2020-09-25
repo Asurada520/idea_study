@@ -7,4 +7,11 @@
 		select * from users;
 	</select>
 
+	<insert id="insert" parameterType="com.jade.entity.Users">
+
+		insert into users(id,`name`,age)
+		values (#{id},#{name},#{age});
+
+	</insert>
+
 </mapper>

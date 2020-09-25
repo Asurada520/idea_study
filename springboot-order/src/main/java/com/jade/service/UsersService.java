@@ -19,4 +19,9 @@ public class UsersService {
         return users;
     }
 
+    public int insert(Users users){
+        int insert = usersMapper.insert(users);
+        return insert;
+    }
+
 }

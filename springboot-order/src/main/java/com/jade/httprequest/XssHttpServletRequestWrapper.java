@@ -25,10 +25,8 @@ public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper {
     @Override
     public String getParameter(String name) {
         String parameter = super.getParameter(name);
-        // System.out.println("parameter res:" + parameter);
         if (StringUtils.isNotEmpty(name)) {
             parameter = StringEscapeUtils.escapeHtml(parameter);
-            // System.out.println("parameter rest:" + parameter);
         }
         return parameter;
     }
