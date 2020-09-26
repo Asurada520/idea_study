@@ -7,6 +7,7 @@ import com.jade.service.UsersService;
 import com.jade.utils.TokenUtils;
 import com.jade.utils.UuidUtil;
 import jdk.nashorn.internal.parser.Token;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,6 +43,9 @@ public class UsersController {
 
         String token = reqEntity.getToken();
         System.out.println("token:" + token);
+        if(StringUtils.isEmpty(token)){
+            return "token is null";
+        }
 
         boolean flag = TokenUtils.findToken(token);
         if(flag){
@@ -50,9 +54,12 @@ public class UsersController {
             users.setAge(reqEntity.getPassword());
             usersService.insert(users);
             return "OK";
+        }else{
+
+            return "Please do not pull up against.";
+
         }
 
-        return "NO";
     }
 
 

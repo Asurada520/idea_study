@@ -15,4 +15,8 @@ public class JspController {
         return "jspIndex";
     }
 
+    @RequestMapping("go2")
+    public String goUploadJsp(){
+        return "uploadFile";
+    }
 }
