@@ -5,13 +5,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/jsp/")
+@RequestMapping("/file/")
 @Slf4j
-public class JspController {
+public class FileUploadController {
 
-    @RequestMapping("go1")
-    public String goJsp(){
-        log.info("springboot access first jsp document.");
-        return "jspIndex";
+    @RequestMapping("go")
+    public String goUploadJsp(){
+        return "uploadFile";
     }
 }

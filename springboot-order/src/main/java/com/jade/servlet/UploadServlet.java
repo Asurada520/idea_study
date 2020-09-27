@@ -18,16 +18,22 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 
-@WebServlet("/load/UploadServlet")
+@WebServlet(value = "/upload/UploadServlet")
 public class UploadServlet extends HttpServlet {
+
+	private static final long serialVersionUID = -710092391590764385L;
 
 	/**
 	 * 文件上传
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) {
 		String root = request.getServletContext().getRealPath("/upload");
+
+		System.out.println("root:" + root);
+
 		DiskFileItemFactory factory = new DiskFileItemFactory();
 		ServletFileUpload upload = new ServletFileUpload(factory);
 		try {
@@ -35,14 +41,14 @@ public class UploadServlet extends HttpServlet {
 			for (FileItem it : list) {
 				// 如果是file文件类型
 				if (!it.isFormField()) {
-					// FileType fileType = getFileType(it.getInputStream());
-					// if (fileType == null) {
-					// // 非图片格式
-					// response.getWriter().write("fail");
-					// return;
-					// }
-//					String imgValue = fileType.getValue();
-//					System.out.println("imgValue:" + imgValue);
+					 FileType fileType = getFileType(it.getInputStream());
+					 if (fileType == null) {
+					 // 非图片格式
+					 response.getWriter().write("fail");
+					 return;
+					 }
+					String imgValue = fileType.getValue();
+					System.out.println("imgValue:" + imgValue);
 					// 是图片格式
 					it.write(new File(root + "/" + it.getName()));
 					response.getWriter().write("success");
@@ -67,6 +73,9 @@ public class UploadServlet extends HttpServlet {
 		if (src == null || src.length <= 0) {
 			return null;
 		}
+
+		System.out.println("文件属性代码:" + Arrays.toString(src));
+
 		for (int i = 0; i < src.length; i++) {
 			int v = src[i] & 0xFF;
 			String hv = Integer.toHexString(v).toUpperCase();
