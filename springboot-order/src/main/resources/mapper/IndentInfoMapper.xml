@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jade.dao.IndentInfoMapper">
+
+    <select id="selectAll" resultType="com.jade.entity.IndentInfoEntity">
+		select * from indent_info;
+	</select>
+
+    <insert id="insert" parameterType="com.jade.entity.IndentInfoEntity">
+
+		insert into indent_info(id,indent_code,ident_desc)
+		values (#{id},#{indent_code},#{indent_code});
+
+	</insert>
+
+</mapper>
