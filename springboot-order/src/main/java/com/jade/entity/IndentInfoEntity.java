@@ -20,5 +20,5 @@ public class IndentInfoEntity implements Serializable {
     private static final long serialVersionUID = 1162169625779763354L;
     private String id;
     private String indent_code;
-    private String ident_desc;
+    private String indent_desc;
 }

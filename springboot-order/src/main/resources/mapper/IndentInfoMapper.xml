@@ -9,8 +9,8 @@
 
     <insert id="insert" parameterType="com.jade.entity.IndentInfoEntity">
 
-		insert into indent_info(id,indent_code,ident_desc)
-		values (#{id},#{indent_code},#{indent_code});
+		insert into indent_info(id,indent_code,indent_desc)
+		values (#{id},#{indent_code},#{indent_desc});
 
 	</insert>
 
