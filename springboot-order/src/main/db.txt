@@ -1,0 +1,10 @@
+-- API安全接口安全设计
+CREATE TABLE `m_app` (
+  `id` int(11) NOT NULL AUTO_INCREMENT comment '数据标识',
+  `app_name` varchar(255) DEFAULT NULL comment '机构名称',
+  `app_id` varchar(255) DEFAULT NULL comment '应用ID',
+  `app_secret` varchar(255) DEFAULT NULL comment '应用密钥  （可更改）',
+  `is_flag` varchar(255) DEFAULT NULL comment '是否可用 （是否对某个机构开放）',
+  `access_token` varchar(255) DEFAULT NULL comment '上一次access_token',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
