@@ -2,6 +2,7 @@ package com.jade.service;
 
 import com.jade.dao.IndentInfoMapper;
 import com.jade.entity.IndentInfoEntity;
+import com.jade.utils.UuidUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class IndentInfoService {
 
 
     public int insert(IndentInfoEntity indentInfo){
+        indentInfo.setId(UuidUtil.get18UUID());
         return indentInfoMapper.insert(indentInfo);
     }
 

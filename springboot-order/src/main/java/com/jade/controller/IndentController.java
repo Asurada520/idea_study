@@ -1,6 +1,7 @@
 package com.jade.controller;
 
 
+import com.jade.annotation.ExtAPIToken;
 import com.jade.annotation.ExtApiIdempotent;
 import com.jade.common.ConstantUtils;
 import com.jade.entity.IndentInfoEntity;
@@ -66,26 +67,14 @@ public class IndentController {
         return result > 0 ? "操作成功" : "操作失败";
     }
 
-
     /**
+     *
      * @param indentInfoEntity
-     * @param request
-     * @return
+     * @return 操作详情
      */
     @RequestMapping(value = "add2", method = RequestMethod.POST)
     @ExtApiIdempotent(type = ConstantUtils.EXTAPIHEAD)
-    public Object addIndentDemo2(@RequestBody IndentInfoEntity indentInfoEntity/*, HttpServletRequest request*/) {
-
-//        String token = request.getHeader("token");
-//        if (StringUtils.isEmpty(token)) {
-//            return "参数错误";
-//        }
-//
-//        boolean tokenFlag = redisToken.findToken(token);
-//        if (!tokenFlag) {
-//            return "请勿重复提交";
-//        }
-
+    public Object addIndentDemo2(@RequestBody IndentInfoEntity indentInfoEntity) {
         int result = indentInfoService.insert(indentInfoEntity);
         return result > 0 ? "操作成功" : "操作失败";
     }
