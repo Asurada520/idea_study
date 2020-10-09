@@ -7,5 +7,8 @@
 		select * from m_app where app_id = #{app_id} and app_secret = #{app_secret}
 	</select>
 
+	<update id="updateInfoById" parameterType="com.jade.entity.MAppEntity">
+		update m_app set access_token = #{access_token} where id = #{id}
+	</update>
 
 </mapper>

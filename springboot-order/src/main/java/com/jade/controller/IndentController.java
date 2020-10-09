@@ -34,17 +34,6 @@ public class IndentController {
         return token;
     }
 
-
-    /**
-     * -- 订货单信息
-     * CREATE TABLE indent_info(
-     * 	id VARCHAR(64) COMMENT '表主键',
-     * 	indent_code VARCHAR(64) COMMENT '订货单编号',
-     * 	indent_desc VARCHAR(64) COMMENT '订货单描述',
-     * 	PRIMARY KEY(id)
-     * )ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT='订货单信息';
-     */
-
     /**
      * @param indentInfoEntity
      * @param request

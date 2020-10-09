@@ -8,3 +8,12 @@ CREATE TABLE `m_app` (
   `access_token` varchar(255) DEFAULT NULL comment '上一次access_token',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+
+-- 订货单信息
+CREATE TABLE indent_info(
+	id VARCHAR(64) COMMENT '表主键',
+	indent_code VARCHAR(64) COMMENT '订货单编号',
+	indent_desc VARCHAR(64) COMMENT '订货单描述',
+	PRIMARY KEY(id)
+)ENGINE=INNODB DEFAULT CHARSET=utf8 COMMENT='订货单信息';

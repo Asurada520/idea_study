@@ -4,6 +4,8 @@ import com.jade.entity.MAppEntity;
 
 public interface MAppMapper {
 
-    public MAppEntity getInfoByIdAndSecret(String app_id, String app_secret);
+    public MAppEntity getInfoByIdAndSecret(MAppEntity appEntity);
+
+    public int updateInfoById(MAppEntity appEntity);
 
 }

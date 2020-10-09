@@ -12,7 +12,12 @@ public class AppService {
     private MAppMapper mAppMapper;
 
     public MAppEntity getInfoByIdAndSecret(MAppEntity mAppEntity){
-        return mAppMapper.getInfoByIdAndSecret(mAppEntity.getApp_id(), mAppEntity.getApp_secret());
+        return mAppMapper.getInfoByIdAndSecret(mAppEntity);
+    }
+
+    public int updateInfoById(MAppEntity appEntity){
+        int i = mAppMapper.updateInfoById(appEntity);
+        return i;
     }
 
 }
