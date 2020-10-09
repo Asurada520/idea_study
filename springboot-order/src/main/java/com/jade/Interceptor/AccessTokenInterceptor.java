@@ -51,7 +51,7 @@ public class AccessTokenInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        System.out.println("---------------视图渲染之后的操作-------------------------0");
+        System.out.println("---------------视图渲染之后的操作-------------------------");
         String accessToken = request.getHeader("accessToken");
         redisConfig.delKey(accessToken);
 
