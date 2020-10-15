@@ -1,0 +1,15 @@
+server:
+  #修改端口号
+  port: 8100
+
+eureka:
+  instance:
+    hostname: server1 #eureka服务端起个名字
+  client:
+    serviceUrl:
+      #注册中心的地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #由于自己就是服务器，不需要注册到自己
+    register-with-eureka: false
+    #由于自己就是服务器，不需要注册到自己
+    fetch-registry: false
