@@ -1,15 +1,24 @@
 server:
-  #修改端口号
+  # 修改端口号
   port: 8100
 
 eureka:
   instance:
-    hostname: server1 #eureka服务端起个名字
+    hostname: localhost # eureka服务端起个名字
+  server:
+    # 是否开启自我保护机制, 测试时关闭自我保护机制，保证不可用服务及时踢出
+    enable-self-preservation: true
+    # 剔除失效服务间隔，默认60000 ms
+    eviction-interval-timer-in-ms: 3000
+
   client:
+    #设置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址。默认是http://localhost:8761/eureka ；多个地址可使用 , 分隔
     serviceUrl:
-      #注册中心的地址
+      # 注册中心的地址
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-    #由于自己就是服务器，不需要注册到自己
+    # 由于自己就是服务器，不需要注册到自己
+    # #声明自己是服务端,表示是否将自己注册到Eureka Server，默认为true。由于当前这个应用就是Eureka Server，故而设为false
     register-with-eureka: false
-    #由于自己就是服务器，不需要注册到自己
+    # 由于自己就是服务器，不需要注册到自己
+    #表示是否从Eureka Server获取注册信息，默认为true。因为这是一个单点的Eureka Server，不需要同步其他的Eureka Server节点的数据，故而设为false
     fetch-registry: false
