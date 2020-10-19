@@ -9,7 +9,7 @@ public class DBConfig {
 
     private String userName = "root";
 
-    private String password = "root";
+    private String password = "123456";
 
     private String poolName = "thread01";// 连接池名字
 

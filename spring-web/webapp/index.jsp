@@ -12,5 +12,6 @@
   </head>
   <body>
       项目测试222
+      <img src="http://static.jade.com/static/img/jade.png"/>
   </body>
 </html>
