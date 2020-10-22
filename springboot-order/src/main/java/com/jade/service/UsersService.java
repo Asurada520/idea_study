@@ -24,4 +24,9 @@ public class UsersService {
         return insert;
     }
 
+    public Users selectInfoById(Users users){
+        Users usersResult = usersMapper.selectInfoById(users);
+        return usersResult;
+    }
+
 }

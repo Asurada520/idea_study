@@ -35,6 +35,11 @@ spring:
         max-idle: 8
         min-idle: 0
     timeout: 10000
+      # 缓存配置读取
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
 
 # ext config
 domain:

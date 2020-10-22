@@ -14,4 +14,9 @@
 
 	</insert>
 
+	<select id="selectInfoById" resultType="com.jade.entity.Users">
+		select * from users where id = #{id};
+	</select>
+
+
 </mapper>

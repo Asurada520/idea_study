@@ -9,4 +9,6 @@ public interface UsersMapper {
     public List<Users> selectAll();
 
     public int insert(Users users);
+
+    public Users selectInfoById(Users users);
 }
