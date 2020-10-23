@@ -2,7 +2,8 @@
 <ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
 
-    <diskStore path="java.io.tmpdir/ehcache-rmi-4000" />
+    <!--diskStore：为缓存路径，ehcache分为内存和磁盘两级，此属性定义磁盘的缓存位置。-->
+    <!--<diskStore path="java.io.tmpdir/ehcache-rmi-4000" />-->
 
     <!-- 多台机器配置 rmiUrls=//192.168.8.32:400002/demoCache|//192.168.5.231:400003/demoCache -->
     <!--<cacheManagerPeerProviderFactory
@@ -19,6 +20,7 @@
         timeToLive=32" /> -->
 
     <!-- 默认缓存 -->
+    <!--defaultCache：默认缓存策略，当ehcache找不到定义的缓存时，则使用这个缓存策略。只能定义一个。-->
     <defaultCache maxElementsInMemory="1000" eternal="true"
                   timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
                   diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
@@ -26,16 +28,33 @@
                   memoryStoreEvictionPolicy="LRU">
     </defaultCache>
 
-    <!-- demo缓存 -->
-    <cache name="userCache" maxElementsInMemory="1000" eternal="false"
-           timeToIdleSeconds="120" timeToLiveSeconds="120" overflowToDisk="true"
-           diskSpoolBufferSizeMB="30" maxElementsOnDisk="10000000"
-           diskPersistent="false" diskExpiryThreadIntervalSeconds="120"
-           memoryStoreEvictionPolicy="LRU">
-        <cacheEventListenerFactory
-                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />
+    <!-- demo缓存
+        name:缓存名称
+        maxElementsInMemory:缓存最大数目
+        maxElementsOnDisk：硬盘最大缓存个数
+        eternal:对象是否永久有效，一但设置了，timeout将不起作用
+        overflowToDisk:是否保存到磁盘，当系统宕机时
+        timeToIdleSeconds:设置对象在失效前的允许闲置时间（单位：秒）。
+                          仅当eternal=false对象不是永久有效时使用，可选属性，默认值是0，也就是可闲置时间无穷大
+
+
+    -->
+    <cache name="userCache"
+           maxElementsInMemory="1000"
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           overflowToDisk="true"
+           diskSpoolBufferSizeMB="30"
+           maxElementsOnDisk="10000000"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LRU"
+    >
+        <!--<cacheEventListenerFactory
+                class="net.sf.ehcache.distribution.RMICacheReplicatorFactory" />-->
         <!-- 用于在初始化缓存，以及自动设置 -->
-        <bootstrapCacheLoaderFactory
-                class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory" />
+        <!--<bootstrapCacheLoaderFactory
+                class="net.sf.ehcache.distribution.RMIBootstrapCacheLoaderFactory" />-->
     </cache>
 </ehcache>

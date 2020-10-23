@@ -35,6 +35,25 @@ public class RedisConfig {
         }
     }
 
+
+    public void setString(String key, Object object) {
+        // 开启事务权限
+        // stringRedisTemplate.setEnableTransactionSupport(true);
+        try {
+            // 开启事务 begin
+            // stringRedisTemplate.multi();
+            String value = (String) object;
+            stringRedisTemplate.opsForValue().set(key, value);
+            // System.out.println("存入完毕,马上开始提交redis事务");
+            // 提交事务
+            // stringRedisTemplate.exec();
+        } catch (Exception e) {
+            // 需要回滚事务
+            // stringRedisTemplate.discard();
+        }
+    }
+
+
     /**
      * delete key-value
      *
