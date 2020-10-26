@@ -3,7 +3,7 @@
          xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
 
     <!--diskStore：为缓存路径，ehcache分为内存和磁盘两级，此属性定义磁盘的缓存位置。-->
-    <!--<diskStore path="java.io.tmpdir/ehcache-rmi-4000" />-->
+    <diskStore path="java.io.tmpdir/ehcache-rmi-4000" />
 
     <!-- 多台机器配置 rmiUrls=//192.168.8.32:400002/demoCache|//192.168.5.231:400003/demoCache -->
     <!--<cacheManagerPeerProviderFactory
