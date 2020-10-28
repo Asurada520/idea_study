@@ -28,9 +28,9 @@ public class IndexController {
         map.put("sex","2");
 
         List<String> nameList = new ArrayList<>();
-        nameList.add("张静");
-        nameList.add("唐琪琪");
-        nameList.add("王鑫");
+        nameList.add("张青争");
+        nameList.add("唐王其");
+        nameList.add("王三金");
         map.put("nameList", nameList);
 
         return "index";
