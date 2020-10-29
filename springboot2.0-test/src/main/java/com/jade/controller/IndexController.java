@@ -18,6 +18,9 @@ public class IndexController {
     @RequestMapping("/index")
     public String index(Map<String, Object> map){
         map.put("name","My angel!");
+        map.put("sex","1");
+        List<String> nameList = new ArrayList<>();
+        map.put("nameList", nameList);
         return "index";
     }
 
