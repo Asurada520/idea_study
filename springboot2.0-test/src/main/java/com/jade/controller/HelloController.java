@@ -13,8 +13,8 @@ import java.util.Map;
 public class HelloController {
 
 
-    @Autowired
-    private UserService userService;
+//    @Autowired
+//    private UserService userService;
 
 
     @RequestMapping("/hello")
@@ -25,11 +25,11 @@ public class HelloController {
     /* mybatis test*/
     @RequestMapping("/get")
     public Object getUserInfoById(String id){
-        User userResult = userService.getInfoById(id);
-        User userResult2 = userService.getInfoById2(id);
+//        User userResult = userService.getInfoById(id);
+//        User userResult2 = userService.getInfoById2(id);
         Map<String,Object> map = new HashMap<>();
-        map.put("user1",userResult);
-        map.put("user2",userResult2);
+//        map.put("user1",userResult);
+//        map.put("user2",userResult2);
         return map;
     }
 }

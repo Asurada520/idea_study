@@ -19,25 +19,25 @@ import java.util.Enumeration;
 public class WebLogAspect {
 
 
-    @Pointcut("execution(public * com.jade.controller.*.*(..))")
-    public void webLog(){
-    }
-
-    @Before("webLog()")
-    public void before(JoinPoint joinPoint){
-
-        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = attributes.getRequest();
-        log.info("URL : " + request.getRequestURL().toString());
-        log.info("HTTP_METHOD : " + request.getMethod());
-        log.info("IP : " + request.getRemoteAddr());
-
-        Enumeration<String> enu = request.getParameterNames();
-        while (enu.hasMoreElements()) {
-            String name = (String) enu.nextElement();
-            log.info("name:{},value:{}", name, request.getParameter(name));
-        }
-
-    }
+//    @Pointcut("execution(public * com.jade.controller.*.*(..))")
+//    public void webLog(){
+//    }
+//
+//    @Before("webLog()")
+//    public void before(JoinPoint joinPoint){
+//
+//        ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+//        HttpServletRequest request = attributes.getRequest();
+//        log.info("URL : " + request.getRequestURL().toString());
+//        log.info("HTTP_METHOD : " + request.getMethod());
+//        log.info("IP : " + request.getRemoteAddr());
+//
+//        Enumeration<String> enu = request.getParameterNames();
+//        while (enu.hasMoreElements()) {
+//            String name = (String) enu.nextElement();
+//            log.info("name:{},value:{}", name, request.getParameter(name));
+//        }
+//
+//    }
 
 }
