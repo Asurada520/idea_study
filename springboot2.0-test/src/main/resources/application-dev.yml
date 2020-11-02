@@ -1,0 +1,30 @@
+spring:
+# jsp
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+# mysql
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: 123456
+
+  datasource1:
+    test1.jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
+    test1.driver-class-name: com.mysql.jdbc.Driver
+    test1.username: root
+    test1.password: 123456
+
+  datasource2:
+    test2.jdbc-url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
+    test2.driver-class-name: com.mysql.jdbc.Driver
+    test2.username: root
+    test2.password: 123456
+
+# mybatis
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  mapper-locations: classpath*:mapper/*.xml

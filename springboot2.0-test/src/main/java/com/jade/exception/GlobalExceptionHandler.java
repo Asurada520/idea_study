@@ -11,12 +11,13 @@ import java.util.Map;
 /**
  *  全局捕获异常
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Object exceptionHandler(){
+
         Map<String,Object> map = new HashMap<>();
         map.put("code","101");
         map.put("msg","system error");

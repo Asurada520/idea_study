@@ -9,17 +9,17 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class UserService {
 
-    @Autowired
-    private UserMapper userMapper;
+//    @Autowired
+//    private UserMapper userMapper;
 
-    @Transactional
-    public User getInfoById(String id){
-        User userResult = userMapper.getInfoById(id);
-        return userResult;
-    }
-
-    public User getInfoById2(String id){
-        User userResult = userMapper.getInfoById(id);
-        return userResult;
-    }
+//    @Transactional
+//    public User getInfoById(String id){
+//        User userResult = userMapper.getInfoById(id);
+//        return userResult;
+//    }
+//
+//    public User getInfoById2(String id){
+//        User userResult = userMapper.getInfoById(id);
+//        return userResult;
+//    }
 }

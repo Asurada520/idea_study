@@ -6,7 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.jade.dao")
+//@MapperScan("com.jade.dao")
 public class SP20App {
     public static void main(String[] args) {
         SpringApplication.run(SP20App.class,args);
