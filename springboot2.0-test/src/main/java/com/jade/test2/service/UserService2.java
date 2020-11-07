@@ -12,6 +12,7 @@ public class UserService2 {
     @Autowired
     private UserMapper2 userMapper;
 
+    @Transactional("test2TransactionManager")
     public int insert(User user){
         int count = userMapper.insert(user);
         return count;

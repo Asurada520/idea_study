@@ -13,8 +13,8 @@ import java.util.Map;
 public class HelloController {
 
 
-//    @Autowired
-//    private UserService userService;
+    @Autowired
+    private UserService userService;
 
 
     @RequestMapping("/hello")
@@ -32,4 +32,17 @@ public class HelloController {
 //        map.put("user2",userResult2);
         return map;
     }
+
+    @RequestMapping("/async")
+    public Object asyncTest() throws InterruptedException {
+
+        System.out.println("1");
+
+        userService.asyncTest();
+
+        System.out.println("3");
+
+        return "success";
+    }
+
 }
