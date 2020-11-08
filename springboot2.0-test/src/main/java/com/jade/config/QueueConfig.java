@@ -15,12 +15,10 @@ public class QueueConfig {
 
     @Value("${queue}")
     private String queue;
-
     @Bean
     public Queue logQueue() {
         return new ActiveMQQueue(queue);
     }
-
     @Bean
     public JmsTemplate jmsTemplate(ActiveMQConnectionFactory activeMQConnectionFactory, Queue queue) {
         JmsTemplate jmsTemplate = new JmsTemplate();
