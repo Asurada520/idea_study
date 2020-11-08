@@ -11,18 +11,23 @@ spring:
 #    username: root
 #    password: 123456
 
-  datasource1:
+  datasource:
     test1.jdbc-url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
     test1.driver-class-name: com.mysql.jdbc.Driver
     test1.username: root
     test1.password: 123456
 
-  datasource2:
     test2.jdbc-url: jdbc:mysql://localhost:3306/test2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&allowMultiQueries=true&useSSL=false
     test2.driver-class-name: com.mysql.jdbc.Driver
     test2.username: root
     test2.password: 123456
 
+  activemq:
+    broker-url: tcp://localhost:61616
+    user: admin
+    password: admin
+
+queue: springboot2020-11-07-queue
 # mybatis
 #mybatis:
 #  configuration:
