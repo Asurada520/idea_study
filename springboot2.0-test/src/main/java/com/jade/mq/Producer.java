@@ -16,7 +16,7 @@ public class Producer {
         Connection connection = activeMQConnectionFactory.createConnection();
         // 启动连接
         connection.start();
-        // 创建工厂会话
+        // 创建工厂会话 参数：1.是否事务提交    2.自动签收
         Session session = connection.createSession(Boolean.FALSE, Session.AUTO_ACKNOWLEDGE);
         // 创建队列
         Destination destination = session.createQueue("jade_queue");
