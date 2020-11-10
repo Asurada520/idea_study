@@ -18,8 +18,8 @@ import java.util.Enumeration;
  */
 @Component
 @Aspect
-@Slf4j
 public class WebLogAspect {
+
 
 
     @Pointcut("execution(public * com.jade.controller.*.*(..))")
@@ -31,14 +31,14 @@ public class WebLogAspect {
 
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        log.info("URL : " + request.getRequestURL().toString());
-        log.info("HTTP_METHOD : " + request.getMethod());
-        log.info("IP : " + request.getRemoteAddr());
+        System.out.println("URL : " + request.getRequestURL().toString());
+        System.out.println("HTTP_METHOD : " + request.getMethod());
+        System.out.println("IP : " + request.getRemoteAddr());
 
         Enumeration<String> enu = request.getParameterNames();
         while (enu.hasMoreElements()) {
             String name = (String) enu.nextElement();
-            log.info("name:{},value:{}", name, request.getParameter(name));
+            System.out.println("name:{"+name+"},value:{"+request.getParameter(name)+"}");
         }
 
     }
