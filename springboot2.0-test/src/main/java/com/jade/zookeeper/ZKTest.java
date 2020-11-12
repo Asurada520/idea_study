@@ -33,7 +33,7 @@ public class ZKTest {
                 EventType eventType = event.getType();
                 // 判断是否已经连接
                 if (KeeperState.SyncConnected == keeperState) {
-                    // 客户端与服务端成功建立连接
+                    // 连接成功后，获取具体的事件类型
                     if (EventType.None == eventType) {
                         countDownLatch.countDown();
                         System.out.println("connection successful");
