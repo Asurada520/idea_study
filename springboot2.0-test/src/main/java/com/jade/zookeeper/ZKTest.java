@@ -31,7 +31,7 @@ public class ZKTest {
                 KeeperState keeperState = event.getState();
                 // 获取时间类型
                 EventType eventType = event.getType();
-                //
+                // 判断是否已经连接
                 if (KeeperState.SyncConnected == keeperState) {
                     // 客户端与服务端成功建立连接
                     if (EventType.None == eventType) {
