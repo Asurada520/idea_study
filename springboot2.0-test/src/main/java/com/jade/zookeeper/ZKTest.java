@@ -40,15 +40,18 @@ public class ZKTest {
                         countDownLatch.countDown();
                         log.info("zookeeper connection is successful");
                     }
+                    if(eventType.NodeCreated == eventType){
+                        log.info("this node created is successful");
+                    }
                 }
             }
         });
         countDownLatch.await();
 
         // 节点名称
-        String nodeName = "/test002/t4";
+        String nodeName = "/test002/t5";
 
-        // 判断 Node 状态
+        // 判断 Node 状态 允许有事件通知
         Stat exists = zooKeeper.exists(nodeName, true);
         System.out.println("--->"+exists);
 
