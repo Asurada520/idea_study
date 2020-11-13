@@ -1,5 +1,6 @@
 package com.jade.zookeeper;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.ZooDefs.Ids;
 
@@ -10,6 +11,7 @@ import org.apache.zookeeper.data.Stat;
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
+@Slf4j
 public class ZKTest {
 
     // 连接地址
@@ -36,14 +38,14 @@ public class ZKTest {
                     // 连接成功后，获取具体的事件类型
                     if (EventType.None == eventType) {
                         countDownLatch.countDown();
-                        System.out.println("connection successful");
+                        log.info("zookeeper connection is successful");
                     }
                 }
             }
         });
         countDownLatch.await();
 
-
+        // 节点名称
         String nodeName = "/test002/t4";
 
         // 判断 Node 状态
