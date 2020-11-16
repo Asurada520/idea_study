@@ -6,8 +6,6 @@
     <file url="file://$PROJECT_DIR$/mos-interview" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-maven" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-web" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/spring-web/target/chinese.html" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/spring-web/target/chineseParam.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/spring-web/webapp/chinese.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/spring-web/webapp/chineseParam.html" charset="GBK" />
     <file url="file://$PROJECT_DIR$/springboot-apollo" charset="UTF-8" />
@@ -23,7 +21,6 @@
     <file url="file://$PROJECT_DIR$/springboot-web-a" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-web-b" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot-zk-test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/springboot2.0" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot2.0-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul-gateway" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

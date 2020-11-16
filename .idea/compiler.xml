@@ -59,7 +59,6 @@
       <module name="apollo-portal" target="1.8" />
       <module name="eureka-client" target="1.8" />
       <module name="eureka-server" target="1.8" />
-      <module name="eureka_server" target="1.8" />
       <module name="interview" target="1.8" />
       <module name="itmayiedu-web-a" target="1.8" />
       <module name="itmayiedu-web-b" target="1.8" />
@@ -82,7 +81,6 @@
       <module name="springboot-web-a" target="1.8" />
       <module name="springboot-web-b" target="1.8" />
       <module name="springboot-zk-test" target="1.8" />
-      <module name="springboot2.0" target="1.8" />
       <module name="springboot2.0-test" target="1.8" />
       <module name="thread-test" target="8" />
       <module name="zuul-gateway" target="1.8" />
@@ -92,7 +90,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
-      <module name="eureka_server" options="-parameters" />
       <module name="interview" options="-parameters" />
       <module name="itmayiedu-web-a" options="-parameters" />
       <module name="itmayiedu-web-b" options="-parameters" />
@@ -108,7 +105,6 @@
       <module name="springboot-web-a" options="-parameters" />
       <module name="springboot-web-b" options="-parameters" />
       <module name="springboot-zk-test" options="-parameters" />
-      <module name="springboot2.0" options="-parameters" />
       <module name="springboot2.0-test" options="-parameters" />
       <module name="zuul-gateway" options="-parameters" />
     </option>
