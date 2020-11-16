@@ -18,8 +18,11 @@
         <module name="apollo-demo" />
         <module name="apollo-mockserver" />
         <module name="apollo-portal" />
+        <module name="eureka-client" />
+        <module name="eureka-server" />
         <module name="interview" />
         <module name="spring-aop" />
+        <module name="spring-ioc" />
         <module name="spring-maven" />
         <module name="springboot-apollo" />
         <module name="springboot-disruptor" />
@@ -27,13 +30,18 @@
         <module name="springboot-ehcache1" />
         <module name="springboot-getui" />
         <module name="springboot-job" />
+        <module name="springboot-member" />
+        <module name="springboot-mybatis" />
+        <module name="springboot-order" />
         <module name="springboot-redis" />
         <module name="springboot-redis-lock" />
         <module name="springboot-session" />
         <module name="springboot-web-a" />
         <module name="springboot-web-b" />
         <module name="springboot-zk-test" />
+        <module name="springboot2.0-test" />
         <module name="thread-test" />
+        <module name="zuul-gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -49,10 +57,14 @@
       <module name="apollo-demo" target="1.7" />
       <module name="apollo-mockserver" target="1.8" />
       <module name="apollo-portal" target="1.8" />
+      <module name="eureka-client" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="eureka_server" target="1.8" />
       <module name="interview" target="1.8" />
       <module name="itmayiedu-web-a" target="1.8" />
       <module name="itmayiedu-web-b" target="1.8" />
       <module name="spring-aop" target="8" />
+      <module name="spring-ioc" target="8" />
       <module name="spring-maven" target="1.8" />
       <module name="spring-web" target="1.8" />
       <module name="springboot-apollo" target="1.8" />
@@ -61,17 +73,26 @@
       <module name="springboot-ehcache1" target="1.8" />
       <module name="springboot-getui" target="1.8" />
       <module name="springboot-job" target="1.5" />
+      <module name="springboot-member" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
+      <module name="springboot-order" target="1.8" />
       <module name="springboot-redis" target="1.8" />
       <module name="springboot-redis-lock" target="1.5" />
       <module name="springboot-session" target="1.8" />
       <module name="springboot-web-a" target="1.8" />
       <module name="springboot-web-b" target="1.8" />
       <module name="springboot-zk-test" target="1.8" />
+      <module name="springboot2.0" target="1.8" />
+      <module name="springboot2.0-test" target="1.8" />
       <module name="thread-test" target="8" />
+      <module name="zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-client" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
       <module name="interview" options="-parameters" />
       <module name="itmayiedu-web-a" options="-parameters" />
       <module name="itmayiedu-web-b" options="-parameters" />
@@ -79,11 +100,17 @@
       <module name="springboot-ehcache" options="-parameters" />
       <module name="springboot-ehcache1" options="-parameters" />
       <module name="springboot-getui" options="-parameters" />
+      <module name="springboot-member" options="-parameters" />
+      <module name="springboot-mybatis" options="-parameters" />
+      <module name="springboot-order" options="-parameters" />
       <module name="springboot-redis" options="-parameters" />
       <module name="springboot-session" options="-parameters" />
       <module name="springboot-web-a" options="-parameters" />
       <module name="springboot-web-b" options="-parameters" />
       <module name="springboot-zk-test" options="-parameters" />
+      <module name="springboot2.0" options="-parameters" />
+      <module name="springboot2.0-test" options="-parameters" />
+      <module name="zuul-gateway" options="-parameters" />
     </option>
   </component>
 </project>

@@ -13,6 +13,7 @@
     <file type="web" url="file://$PROJECT_DIR$/spring-web" />
     <file type="web" url="file://$PROJECT_DIR$/springboot-web-a" />
     <file type="web" url="file://$PROJECT_DIR$/springboot-web-b" />
+    <file type="web" url="file://$PROJECT_DIR$/springboot2.0-test" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -37,6 +38,14 @@
         <option value="$PROJECT_DIR$/springboot-getui/pom.xml" />
         <option value="$PROJECT_DIR$/springboot-disruptor/pom.xml" />
         <option value="$PROJECT_DIR$/spring-maven/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-ioc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-order/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-member/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-client/pom.xml" />
+        <option value="$PROJECT_DIR$/zuul-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot2.0-test/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
