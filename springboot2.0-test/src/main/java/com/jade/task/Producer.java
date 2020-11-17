@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.jms.Queue;
 
-@Component
+//@Component
 public class Producer {
 
     @Autowired
