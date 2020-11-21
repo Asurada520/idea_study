@@ -1,3 +1,6 @@
+server:
+  port: 8080
+
 spring:
 # jsp
   mvc:
@@ -27,9 +30,27 @@ spring:
     user: admin
     password: admin
 
+  redis:
+    database: 0
+    host: localhost
+    port: 6379
+    password: 123456
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 10000
+
 queue: springboot2020-11-07-queue
 # mybatis
 #mybatis:
 #  configuration:
 #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 #  mapper-locations: classpath*:mapper/*.xml
+
+redis:
+  hostname: localhost
+  port: 6379
+  password: 123456
