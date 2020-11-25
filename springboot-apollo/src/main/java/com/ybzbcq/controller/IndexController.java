@@ -13,6 +13,7 @@ public class IndexController {
 
     @RequestMapping("/get")
     public Object get(){
+        System.out.println("port:" + port);
         return port;
     }
 }
