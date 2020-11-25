@@ -14,11 +14,11 @@ class ThreadVolatile extends Thread {
     @Override
     public void run() {
 
-        System.out.println(" 子线程 开始 ... ");
+        System.out.println("Child thread starting  ... ");
         while (flag){
 
         }
-        System.out.println(" 子线程 结束 ... ");
+        System.out.println("Child thread stopped  ... ");
     }
 
     public void setFlag( boolean flag){
@@ -34,11 +34,11 @@ public class Test04 {
         threadVolatile.start();
         Thread.sleep(3000);
         threadVolatile.setFlag(false);
-        System.out.println("flag 修改 为 false");
+        System.out.println("Flag updated: false");
 
         Thread.sleep(1000);
 
-        System.out.println("Flag:" + threadVolatile.flag);
+        System.out.println("Flag got:" + threadVolatile.flag);
 
     }
 
