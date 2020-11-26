@@ -36,14 +36,14 @@ class Sign extends Thread {
             e.printStackTrace();
         }
 
-        System.out.println(name + "终于上厕所啦.爽啊" + ",剩下厕所:" + semaphore.availablePermits());
+        System.out.println(name + " 终于上厕所啦.爽啊" + ",剩下厕所:" + semaphore.availablePermits());
 
         try {
             Thread.sleep(new Random().nextInt(1000));
         } catch (Exception e) {
             // TODO: handle exception
         }
-        System.out.println(name + "厕所上完啦!");
+        System.out.println(name + " 厕所上完啦!");
         // 释放资源
         semaphore.release();
 
