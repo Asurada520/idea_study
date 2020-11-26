@@ -27,9 +27,10 @@ class ProducerThread implements Runnable {
 
         String threadName = Thread.currentThread().getName();
         try {
+
+            System.out.println(threadName + "--> ] 生产者开始启动 ... ");
             while (flag) {
-                System.out.println("< --------------------------------------- >");
-                System.out.println(threadName + "--> ] 生产者开始启动 ... ");
+
                 String data = count.incrementAndGet() + "";
 
                 boolean offer = blockingQueue.offer(data, 2, TimeUnit.SECONDS);
@@ -76,7 +77,7 @@ class ConsumerThread implements Runnable {
                     return;
                 }
 
-                System.out.println(threadName + "<-- ] 消费者获取队列消息成功，data: " + data);
+                System.out.println(threadName + "<-- ] 消费者获取队列消息成功，数据: " + data);
 
             }
         } catch (InterruptedException e) {
