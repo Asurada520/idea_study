@@ -14,7 +14,7 @@ public class FutureTest {
             @Override
             public String call() throws Exception {
                 Thread.sleep(1000);
-                return " 凉菜准备完成 ... ";
+                return "凉菜准备完成 ... ";
             }
         };
 
@@ -26,7 +26,7 @@ public class FutureTest {
             @Override
             public String call() throws Exception {
                 Thread.sleep(3*1000);
-                return " 包子准备完成 ...";
+                return "包子准备完成 ...";
             }
         };
 
@@ -38,7 +38,7 @@ public class FutureTest {
 
         long end = System.currentTimeMillis();
 
-        System.out.println(" Food 准备完成时间：" + (end - start));
+        System.out.println("食物准备完成，需时：" + (end - start));
 
     }
 }
