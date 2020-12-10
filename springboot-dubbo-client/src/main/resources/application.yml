@@ -1,0 +1,11 @@
+server:
+  port: 9080 #Tomcat端口
+
+spring:
+  dubbo:
+    application:
+      name: springboot-dubbo-demo #应用名
+    registry:
+      address: zookeeper://localhost #zookeeper地址
+      port: 2181 #提供注册的端口
+    scan: com.jade.controller
