@@ -33,7 +33,6 @@ public class BatchController {
         return driverList;
     }
 
-
     @RequestMapping(value = "wxDriverInfo", method = RequestMethod.POST)
     public Object getExcelData(MultipartFile filename) {
         List<List<Object>> readDriverlists = new ArrayList<>();
