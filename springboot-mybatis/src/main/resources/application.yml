@@ -5,15 +5,23 @@ spring:
     show-sql: true
 
   datasource:
-    url: jdbc:mysql://192.168.0.121:3307/rx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: root
-    password: 1
+#    url: jdbc:mysql://192.168.0.121:3307/rx?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+#    username: root
+#    password: 1
+#    driver-class-name: com.mysql.jdbc.Driver
+
+    url: jdbc:mysql://127.0.0.1:3306/jjqxcx.kkkl.top?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: jjqxcx.kkkl.top
+    password: 4e8BpKiT7nFnZbkx
     driver-class-name: com.mysql.jdbc.Driver
   # mvc 配置
   mvc:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+  jmx:
+    default-domain: jjq
+    enabled: false
 
 mybatis:
   configuration:
