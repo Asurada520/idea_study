@@ -36,10 +36,10 @@ public class ExtFileUploadController {
     @ResponseBody
     public Object upload(@RequestParam("file") MultipartFile file) {
 
-        String endpoint = "https://oss-cn-beijing.aliyuncs.com";
-        String accessKeyId = "LTAI4GFdwKqJqk2D29yni5KJ";
-        String accessKeySecret = "lPgTlfKR6RKvOEoPK7Xg5WNR6QHeZv";
-        String bucketName = "ljwximg";
+        String endpoint = "";
+        String accessKeyId = "";
+        String accessKeySecret = "";
+        String bucketName = "";
 
         try {
 
